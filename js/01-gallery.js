@@ -31,16 +31,14 @@ function onClick(event) {
     class="gallery__image"
     src= ${event.target.src}
     
-/>`,{onShow: (instance) => {document.addEventListener("keydown", event => {
+/>`,{onShow: (instance) => {document.addEventListener("keydown", onEscape)
+function onEscape (event) {
     console.log("Keydown: ", event);
     if (event.key === "Escape") {  
     instance.close()
         
-    }
-}, {once: true});
-},
-
-})
+    }}}}, {onClose: (instance) => {document.removeEventListener("keydown", onEscape)}}
+)
 
 instance.show()
 

@@ -16,10 +16,6 @@ galleryRef.addEventListener('click', onClick);
 
 function onClick(event) {
     event.preventDefault();
-    if (event.target.nodeName !== 'IMG')  {
-        return;
-    }
-    console.log(event.target);
     const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: 'alt' });
 }
 // 
