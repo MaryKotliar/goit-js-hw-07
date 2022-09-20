@@ -12,10 +12,6 @@ return item
 galleryRef.innerHTML = markup;
 console.log(galleryItems);
 
-galleryRef.addEventListener('click', onClick);
+const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: 'alt' });
 
-function onClick(event) {
-    event.preventDefault();
-    const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: 'alt' });
-}
 // 
